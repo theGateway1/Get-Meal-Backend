@@ -14,30 +14,35 @@ def getRoutes(request):
         'Endpoint': '/menuItems/',
         'method': 'GET',
         'body': None,
+        'updated': None,
         'description': 'Returns all the menu items'
     },
     {
         'Endpoint': '/menuItems/id',
         'method': 'GET',
         'body': None,
+        'updated': None,
         'description': 'Returns a single menu item'
     },
     {
         'Endpoint': '/menuItems/create',
         'method': 'POST',
         'body': {'body':""},
+        'updated': {'updated':""},
         'description': 'Creates a new menu item with data sent in post request',
     },
     {
         'Endpoint': '/menuItems/id/update',
         'method': 'PUT',
         'body': {'body':""},
+        'updated': {'updated': ""},
         'description': 'Updates an existing menu item',
     },
     {
         'Endpoint': '/menuItems/id/update',
         'method': 'DELETE',
         'body': None,
+        'updated': None,
         'description': 'Deletes an existing menu item',
     },
     ]
@@ -62,7 +67,8 @@ def createMenu(request):
     data = request.data
 
     menu = Menu.objects.create(
-        body = data['body']
+        body = data['body'],
+        updated = data['updated']
     )
 
     serializer = MenuSerializer(menu,many=False)
