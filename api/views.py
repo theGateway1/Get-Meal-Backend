@@ -1,5 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+
+import api
 from .serializers import MenuSerializer
 from .models import Menu
 from api import serializers
@@ -65,3 +67,20 @@ def createMenu(request):
 
     serializer = MenuSerializer(menu,many=False)
     return Response(serializer.data)
+
+@api_view(['PUT'])
+def updateMenu(request, pk):
+    data = request.data
+
+    menu = Menu.objects.get(id=pk)
+
+    serializer = MenuSerializer(menu,data = request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def deleteMenu(request,pk):
+    menu = Menu.objects.get(id=pk)
+    menu.delete()
+    return Response('Menu was deleted')
