@@ -1,13 +1,14 @@
 Give this as post request to create menu
 
 {
-"i1":"a1",
-"i2":"a2",
-"i3":"i3",
-"i4":"i4",
-"i5":"i5",
-"i6":"i6",
-"i7":"i7",
-"i8":"i8",
-"updated":"uuu" //Mos imp. no coma in last line
-}
+    "id": 23,
+    "i1": "pav bhaji",
+    "i2": "chilly potato",
+    "i3": "kadhi rice",
+    "i4": "Alu Matar",
+    "i5": "Veg Kofta",
+    "i6": "ice cream",
+    "i7": "null",
+    "i8": "null",
+    "updated": "12:30 PM" /Mos imp. no coma in last line
+} 
