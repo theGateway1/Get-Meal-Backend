@@ -15,12 +15,19 @@ class Migration(migrations.Migration):
             name='Menu',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('body', models.TextField()),
-                ('updated', models.DateTimeField(auto_now=True)),
+                ('i1', models.TextField()),
+                ('i2', models.TextField()),
+                ('i3', models.TextField()),
+                ('i4', models.TextField()),
+                ('i5', models.TextField()),
+                ('i6', models.TextField()),
+                ('i7', models.TextField()),
+                ('i8', models.TextField()),
+                ('updated', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
             ],
             options={
-                'ordering': ['-updated'],
+                'ordering': ['-created'],
             },
         ),
     ]
