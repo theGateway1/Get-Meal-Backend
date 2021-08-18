@@ -9,5 +9,5 @@ Give this as post request to create menu
 "i6":"i6",
 "i7":"i7",
 "i8":"i8",
-"updated":"uuu",
+"updated":"uuu" //Mos imp. no coma in last line
 }
