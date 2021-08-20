@@ -1,0 +1,1 @@
+web: gunicorn z_todays_tiffin_backend.wsgi --log-file -
