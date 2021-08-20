@@ -22,6 +22,7 @@ def getRoutes(request):
         'i7': None,
         'i8': None,
         'updated': None,
+        'eta': None,
         'description': 'Returns all the menu items'
     },
     {
@@ -36,6 +37,7 @@ def getRoutes(request):
         'i7': None,
         'i8': None,
         'updated': None,
+        'eta': None,
         'description': 'Returns a single menu item'
     },
     {
@@ -50,6 +52,7 @@ def getRoutes(request):
         'i7': {'i7':""},
         'i8': {'i8':""},
         'updated': {'updated':""},
+        'eta': {'eta':""},
         'description': 'Creates a new menu item with data sent in post request',
     },
     {
@@ -64,6 +67,7 @@ def getRoutes(request):
         'i7': {'i7':""},
         'i8': {'i8':""},
         'updated': {'updated': ""},
+        'eta': {'eta':""},
         'description': 'Updates an existing menu item',
     },
     {
@@ -78,6 +82,7 @@ def getRoutes(request):
         'i7': {'i7':""},
         'i8': {'i8':""},
         'updated': {'update':""},
+        'eta': {'eta':""},
         'description': 'Deletes an existing menu item',
     },
     ]
@@ -110,7 +115,8 @@ def createMenu(request):
         i6 = data['i6'],
         i7 = data['i7'],
         i8 = data['i8'],
-        updated = data['updated']
+        updated = data['updated'],
+        eta = data['eta']
     )
 
     serializer = MenuSerializer(menu,many=False)

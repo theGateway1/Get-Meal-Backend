@@ -11,6 +11,7 @@ class Menu(models.Model):
     i7 = models.TextField(blank=True,default='Cur Null',editable=True)
     i8 = models.TextField(blank=True,default='Cur Null',editable=True)
     updated = models.TextField(blank=True,default='0000',editable=True)
+    eta = models.TextField(blank=True,default='Cur Null',editable=True)
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

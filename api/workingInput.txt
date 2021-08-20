@@ -10,5 +10,6 @@ Give this as post request to create menu
     "i6": "ice cream",
     "i7": "null",
     "i8": "null",
-    "updated": "12:30 PM" /Mos imp. no coma in last line
+    "updated": "12:30 PM",
+    "eta": "1:30 PM" /Mos imp. no coma in last line
 } 
